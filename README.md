@@ -1,27 +1,25 @@
-To-Do List App
+Todo List App  
 
-A simple and interactive to-do list web app built using vanilla JavaScript, HTML, and CSS. It allows users to add tasks, mark them as completed, delete them, and even shows a congratulatory message when all tasks are done.
+A simple, interactive todo list web app that lets you add, complete, and delete tasks. Built with HTML, CSS, and JavaScript.  
 
-Features
-Add new tasks
+ Features  
+**Add tasks** – Type and press enter/add button.  
+**Mark as complete** – Click a task to check/uncheck it.  
+**Delete tasks** – Click the `×` button to remove.  
+**Auto-save** – Tasks are saved in your browser (even after closing).  
+**Celebration** – Confetti pops when all tasks are done!  
 
-Mark tasks as complete/incomplete
+How to Use  
+**Add a task**: Type in the input box and press **Enter** or click **Add**.  
+**Complete a task**: Click on the task to mark it as done (strikethrough).  
+**Delete a task**: Click the `×` button on the right.  
+**Clear all tasks**: Delete tasks one by one (or refresh the page to start fresh).  
 
-Delete individual tasks
 
-Automatically saves your tasks in localStorage
+Tech Used  
+**Frontend**: HTML, CSS, JavaScript  
+**Storage**: `localStorage` 
+ 
+  
 
-Shows a "Congratulations!" popup when all tasks are completed
-
-How It Works
-Adds a <li> to the list when the input field is not empty.
-
-Includes a delete (×) button using a <span>.
-
-Clicking a task toggles the checked class (e.g., for strikethrough effect).
-
-If all tasks are checked, a congratulatory popup appears.
-
-Clicking the × (inside the <span>) deletes the parent <li>.
-
-All tasks are saved to localStorage and reloaded on page refresh using showTask().
+ 
