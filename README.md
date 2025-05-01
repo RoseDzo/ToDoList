@@ -19,6 +19,10 @@ How to Use
 Tech Used  
 **Frontend**: HTML, CSS, JavaScript  
 **Storage**: `localStorage` 
+
+## Demo
+https://6813e2275634d121c28ef91f--voluble-semolina-1a82f6.netlify.app/
+
  
   
 
