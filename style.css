@@ -265,6 +265,7 @@ ul li {
   font-weight: bold;
 }
 
+
 @keyframes bounceIn {
   0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
   70% { transform: translate(-50%, -50%) scale(1.1); }
