@@ -52,6 +52,13 @@ function showCongratulations() {
 }
 
 function enableEditMode(taskElement) {
+    // Check if any task is already in edit mode
+    const editingTask = document.querySelector('.edit-input');
+    if (editingTask) {
+        // Save the current editing task first
+        saveEdit(editingTask.closest('li'));
+    }
+
     const spanText = taskElement.querySelector(".task-text");
     const originalText = spanText.textContent;
 
@@ -117,13 +124,24 @@ function saveEdit(taskElement) {
 
 listContainer.addEventListener("click", function(e) {
     const li = e.target.closest("li");
+    if (!li) return;
 
     if (e.target.tagName === "LI") {
+        // Check if we're currently editing any task
+        if (document.querySelector('.edit-input')) {
+            // Don't toggle checked status during editing
+            return;
+        }
         li.classList.toggle("checked");
         saveData();
         if (checkAllTasksCompleted()) showCongratulations();
     } 
     else if (e.target.classList.contains('delete-btn')) {
+        // Check if we're currently editing any task
+        if (document.querySelector('.edit-input')) {
+            // Don't allow deletion during editing
+            return;
+        }
         li.remove();
         saveData();
         if (checkAllTasksCompleted()) showCongratulations();
